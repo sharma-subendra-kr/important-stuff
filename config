@@ -1,0 +1,16 @@
+# after setting up just use
+# ssh <Host>
+# i.e.
+# ssh ec2mumbai1
+# instead of
+# ssh -i ec2mumbai1.pem ubuntu@ec2-xx-xxx-xxx-xxx.ap-south-1.compute.amazonaws.com
+# i.e.
+# ssh -i </path/to/privateKeyFile.pem> <user>@<dns.com>
+Host ec2mumbai1
+  HostName ec2-xx-xxx-xx-xxx.ap-south-1.compute.amazonaws.com
+  IdentityFile "/home/arsenalfc/.ssh/ec2mumbai1.pem"
+  User ubuntu
+Host deploy
+  HostName ec2-xx-xxx-xx-xxx.ap-south-1.compute.amazonaws.com
+  IdentityFile "/home/arsenalfc/.ssh/deploy.pem"
+  User deploy
